@@ -1,0 +1,19 @@
+{
+  "name": "weather-report-matin",
+  "version": "1.0.0",
+  "description": "this is demo app that shows temprature off some mock data in three diffrenet versions (celsius, kelvin, fahrenheit)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatinKHD/weather-report.git"
+  },
+  "author": "matin-khd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatinKHD/weather-report/issues"
+  },
+  "homepage": "https://github.com/MatinKHD/weather-report#readme"
+}
