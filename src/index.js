@@ -2,9 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { reportWebVitals } from "./reportWebVitals";
 
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import "./index.css";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./app";
 
 const router = createBrowserRouter([]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
