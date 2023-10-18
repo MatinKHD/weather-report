@@ -1,5 +1,7 @@
-import { useLoaderData } from "react-router";
+import { useLoaderData } from "react-router-dom";
 import { weatherData } from "./weatherData";
+
+import "./report.css";
 
 export async function loader({ params }) {
   const { scale } = params;
@@ -9,19 +11,21 @@ export async function loader({ params }) {
 }
 
 function Report() {
-  const { data } = useLoaderData();
+  const { data, scale } = useLoaderData();
 
   return (
-    <dl>
+    <ul>
       {data.map(({ city, temp }) => (
-        <ul key={city}>
-          <li>
-            <span>{city}</span>
-            <span>{temp}</span>
-          </li>
-        </ul>
+        <li key={city}>
+          <span className="city">{city}</span>
+          <span className="temp">
+            {temp}°{scale === "celsius" && <span>c</span>}
+            {scale === "fahrenheit" && <span>f</span>}
+            {scale === "kelvin" && <span>K</span>}
+          </span>
+        </li>
       ))}
-    </dl>
+    </ul>
   );
 }
 
