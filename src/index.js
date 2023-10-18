@@ -6,15 +6,24 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css";
 
+//containers
 import App from "./app";
 
+//components
 import ErrorPage from "./error-page";
+import Report from "./report";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/reports/:scale",
+        element: <Report />,
+      },
+    ],
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
