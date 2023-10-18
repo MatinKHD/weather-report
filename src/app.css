@@ -1,0 +1,54 @@
+.app-container {
+  font-family: cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  color: rgb(30, 30, 30);
+}
+.app-container > h1 {
+  margin: 20px;
+}
+.degree-container > ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.degree-container > ul > li {
+}
+
+.degree-container > ul > li > a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ffffffd6;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: 200ms all ease-in-out;
+}
+.degree-container > ul > li > a:hover {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  background-color: #004cff;
+  color: #ffffffd6;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.divider {
+  width: 14px;
+  height: 100%;
+}
+
+.outlet-container {
+  margin: 20px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  justify-content: center;
+  background-color: #ffffffd6;
+  box-shadow: 0px 0px 10px 3px #949494d6;
+  padding: 20px 40px;
+  border-radius: 15px;
+}
