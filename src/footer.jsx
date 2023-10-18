@@ -5,7 +5,7 @@ function Footer() {
     <nav aria-label="navigation for pages">
       <ul>
         <li>
-          <Link to="/Home">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/About">About</Link>
