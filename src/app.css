@@ -28,10 +28,14 @@
   transition: 200ms all ease-in-out;
 }
 .degree-container > ul > li > a:hover {
+  padding: 0 10px;
+  border-bottom: 5px #004cff solid;
+}
+.active {
   width: 100%;
   text-align: center;
   text-decoration: none;
-  background-color: #004cff;
+  background-color: #004cff !important;
   color: #ffffffd6;
   border-radius: 5px;
   padding: 5px 10px;
