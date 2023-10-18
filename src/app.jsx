@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 import Footer from "./footer";
 
@@ -8,21 +8,42 @@ function App() {
   return (
     <div className="app-container">
       <h1>Temprature App</h1>
-      <div className="degree-container">
+      <nav className="degree-container">
         <ul>
           <li>
-            <Link to="reports/celsius">°c</Link>
+            <NavLink
+              to="reports/celsius"
+              className={({ isActive, isPending }) =>
+                [isPending ? "pending" : "", isActive ? "active" : ""].join("")
+              }
+            >
+              °c
+            </NavLink>
           </li>
           <div className="divider"></div>
           <li>
-            <Link to="reports/fahrenheit">°f</Link>
+            <NavLink
+              to="reports/fahrenheit"
+              className={({ isActive, isPending }) =>
+                [isPending ? "pending" : "", isActive ? "active" : ""].join("")
+              }
+            >
+              °f
+            </NavLink>
           </li>
           <div className="divider"></div>
           <li>
-            <Link to="reports/kelvin">°K</Link>
+            <NavLink
+              to="reports/kelvin"
+              className={({ isActive, isPending }) =>
+                [isPending ? "pending" : "", isActive ? "active" : ""].join("")
+              }
+            >
+              °K
+            </NavLink>
           </li>
         </ul>
-      </div>
+      </nav>
       <div className="outlet-container">
         <Outlet />
       </div>
