@@ -11,7 +11,7 @@ import App from "./app";
 
 //components
 import ErrorPage from "./error-page";
-import Report from "./report";
+import Report, { loader as reportLoader } from "./report";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +22,7 @@ const router = createBrowserRouter([
       {
         path: "/reports/:scale",
         element: <Report />,
+        loader: reportLoader,
       },
     ],
   },
