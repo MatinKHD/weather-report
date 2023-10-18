@@ -9,9 +9,20 @@ export async function loader({ params }) {
 }
 
 function Report() {
-  const data = useLoaderData();
+  const { data } = useLoaderData();
 
-  console.log(data);
+  return (
+    <dl>
+      {data.map(({ city, temp }) => (
+        <ul key={city}>
+          <li>
+            <span>{city}</span>
+            <span>{temp}</span>
+          </li>
+        </ul>
+      ))}
+    </dl>
+  );
 }
 
 export default Report;
