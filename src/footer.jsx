@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 
+import "./footer.css";
+
 function Footer() {
   return (
-    <nav aria-label="navigation for pages">
+    <nav className="footer-nav" aria-label="navigation for pages">
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/reports/celsius">Home</Link>
         </li>
         <li>
           <Link to="/About">About</Link>
